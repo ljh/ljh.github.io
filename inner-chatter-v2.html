@@ -11,10 +11,74 @@
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
+<link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet" type="text/css">
+
+<link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
+
 <style>
+.panel-group { padding-top: 15px; }
+
 .panel-default>.panel-heading#headingOne {
-background-image: linear-gradient(to bottom,#ff0099 0,#ff0000 100%);
+background-image: linear-gradient(to bottom,#ff0099 0,#fe61c0 100%);
 }
+
+#panelOne { border: 1px solid #fe61c0; }	
+
+.panel-default>.panel-heading#headingTwo {
+background-image: linear-gradient(to bottom,#104E8B 0,#1E90FF 100%);
+}
+
+#panelTwo { border: 1px solid #1E90FF; }
+
+.panel-default>.panel-heading#headingThree {
+background-image: linear-gradient(to bottom,#2E8B57 0,#43CD80 100%);
+}
+
+#panelThree { border: 1px solid #43CD80; }
+
+.panel-default>.panel-heading#headingFour {
+background-image: linear-gradient(to bottom,#EE7600 0,#FF8C00 100%);
+}
+
+#panelFour { border: 1px solid #FF8C00; }
+
+.panel-default>.panel-heading { color: #FFF; }
+
+a:focus, a:hover { text-decoration: none; }
+
+body { color: #555; font-family: 'Abel', sans-serif; font-size: 14px; }
+
+.panel-heading { font-size: 20px; letter-spacing: 3px; text-transform: uppercase; font-weight: bold; }
+.subheading, .subsubheading { font-size: 18px; font-weight: bold; text-transform: uppercase; }
+
+.subsubheading { margin-left: 10px; font-size: 16px; }
+
+.subheading:before { content: '\2023\a0'; }
+.subsubheading:before { content: '\2023\2023\a0'; }
+
+table {
+  border-collapse: collapse;
+}
+table td {
+  border: 1px solid #ddd;
+}
+table tr:first-child td {
+  border-top: 0;
+}
+table tr:last-child td {
+  border-bottom: 0;
+}
+table tr td:first-child {
+  border-left: 0;
+}
+table tr td:last-child {
+  border-right: 0;
+}
+
+#educlass { display: none; }
+#educlass .sem { width: 9%; }
+#educlass .clist { width: 24%; }
+td { padding: 5px; vertical-align: top; }
 </style>
 
 
@@ -22,7 +86,7 @@ background-image: linear-gradient(to bottom,#ff0099 0,#ff0000 100%);
 <body>
 <div class="container">
   <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-    <div class="panel panel-default">
+    <div class="panel panel-default" id="panelOne">
       <div class="panel-heading" role="tab" id="headingOne">
         <h4 class="panel-title">
           <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
@@ -32,7 +96,6 @@ background-image: linear-gradient(to bottom,#ff0099 0,#ff0000 100%);
     </div>
     <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
       <div class="panel-body">
-        
 <p>Hey, so, good morning.</p>
 <p>Good morning to you too.</p>
 <p>So, I see you've started a list. Let's put it here.</p>
@@ -45,12 +108,36 @@ background-image: linear-gradient(to bottom,#ff0099 0,#ff0000 100%);
 </ul>
 
 <p>I am thinking about how I would like to revise the look and feel of this list a bit. I like to change things up! It really would be nice if I could get JS to work. Sigh.</p>
+
+<table style="width: 100%;">
+<tr>
+<td>Lake Effect Research Challenge survey</td><td>Need to talk to someone about the 'informed consent' language</td>
+</tr>
+<tr>
+<td>Instruction</td><td>Need to start thinking about when and how to target instructors</td>
+</tr>
+<tr>
+<td>Competencies</td><td>First step is LG boot camp. Need to figure out where and how I am going to incorporate accessibility into this document.</td>
+</tr>
+<tr>
+<td>Collection development</td><td>I have some more things to add to Gobi. A few open windows and the like.</td>
+</tr>
+<tr>
+<td>Animated GIF scholarship</td><td>Need to start thinking about when and how to target instructors</td>
+</tr>
+
+</table>
+
+<ul>
+<li>LG LTI</li>
+<li>Assessment</li>
+</ul>
 		
 		
       </div>
     </div>
   </div>
-  <div class="panel panel-default">
+  <div class="panel panel-default" id="panelTwo">
     <div class="panel-heading" role="tab" id="headingTwo">
       <h4 class="panel-title">
         <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
@@ -60,11 +147,188 @@ background-image: linear-gradient(to bottom,#ff0099 0,#ff0000 100%);
     </div>
     <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
       <div class="panel-body">
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+       
+<p class="subheading">TASKS</p>
+
+<ul>
+<li>Get email down to a more reasonable number</li>
+</ul>
+
+<p class="subheading">NOTES</p>
+
+<p>Something not to forget: basal readers, and flagging those in the catalog retroactively. Deborah says we should wait until Kathryn gets back, which is mid-August, I believe.</p>
+
+<p class="subsubheading">Links people think I should be interested in</p>
+<ul>
+<li><a href="http://www.apa.org/education/k12/relationships.aspx">http://www.apa.org/education/k12/relationships.aspx</a> (Karen)</li>
+<li><a href="http://booklistonline.com/commoncore">http://booklistonline.com/commoncore</a> (Karen)</li>
+<li><a href="http://www.ala.org/rusa/development/instructional-design-ambassadors">http://www.ala.org/rusa/development/instructional-design-ambassadors</a> (Theresa)</li>
+<li><a href="http://diginole.lib.fsu.edu/islandora/object/fsu%3A253715">http://diginole.lib.fsu.edu/islandora/object/fsu%3A253715</a> (Mike - actually interested in this, it's an addendum for pubs)</li>
+<li><a href="http://lithub.com/bookmarks/">http://lithub.com/bookmarks/</a> (Deborah)</li>
+<li><a href="https://gfletchy.com/">https://gfletchy.com/</a> (Karen)</li>
+<li><a href="http://www.shodor.org/interactivate">http://www.shodor.org/interactivate</a> (Karen)</li>
+<li><a href="http://www.eschoolnews.com/ercs/improving-student-outcomes-for-english-language-learners/">http://www.eschoolnews.com/ercs/improving-student-outcomes-for-english-language-learners/</a></li>
+</ul>
+
+
+<ul><li>I made a note about ENG 384/LIT 515, but I don't remember why.</li></ul>
+
+<p>Okay, so, work. looking at my list. So. instruction...need to look at stuff. The files and whatnot. Competencies...the SnagIt thing is going to wait, but I have to plan for bootcamp. That should be on my to do list, maybe next week. Don't forget I have Immersion stuff to read like pronto and shit. Ares/Bb...is done? I hope? Marketing...those guides. I have been working on them for months. They will be done...soon...Weeding is done. Animated GIFs...need to submit to the IRB and stuff. We need to wrap this up in August. Assessment? Who knows. Later. Same with the LTI. Oh, wait. The LTI thing with the boxes and shit. MARKETING.</p>
+
+<ul>
+<li>Ask Karen about email to instruction folks about LERC survey</li>
+<li>Reading, etc. for Immersion</li>
+</ul>
+
+<p style="font-size: larger; font-weight: bold;">Less urgent</p>
+<ul>
+<li>Looking at folders to prep for instruction requests</li>
+<li>Animated gif shit</li>
+<li>LG LTI stuff - marketing</li>
+<li>Plan for LG boot camp</li>
+ </ul>
+
+
+
+
+
+<p class="subsubheading">Questions for online instruction requests</p>
+<ul>
+<li>What's the name of your class?</li>
+<li>When is the class?</li>
+<li>How long is the class?</li>
+<li>What kind of stuff do you want us to do? discussion? if so, for what? specific section? whole semester? what?</li>
+</ul>
+
+<p class="subsubheading">Education Classes, 2013-2016</p>
+<table id="educlass">
+<tbody>
+<tr>
+<td class="sem">Fall 2016 (Potential)</td>
+<td class="clist">
+ADO 350 (1: Ritu Radhakrishnan)<br />
+ADO 394 (1: David Paul Parisian)<br />
+CED 350 (3: Robyn Lynn Proud, Ritu Radhakrishnan)<br />
+CED 394 (3: Lisa Zaspel, Lorraine Middleton Malecki, Katherine Biss)<br />
+EDU 114 (2: Namrata Sharma *)<br />
+EDU 200 (1: Carolyn McKeever)<br />
+EDU 210 (5: Bryon Keith Wilcox, James C. Tschudy, Joseph L. Caruana)<br />
+EDU 301 (5: Bonita Hampton, Roshmi Mishra)<br />
+EDU 500 (1: Tania Ramalho *)<br />
+EDU 516 (1: D. Grayson *)<br />
+LIT 311 (2: Laurel J. Pfund-Byron)<br />
+LIT 396 (2: Lisa M. Spereno, ?)<br />
+LIT 530 (2: Dennis Parsons)<br />
+SPE 304 (3: Linda R. Stummer)<br />
+SPE 504 (1: Amanda Fenlon)<br />
+<strong>TOTAL</strong>: 33 (maximum; some of these courses may be cancelled or not want instruction)<br />
+* = Online course<br />
+<br />
+Other online courses: EDU 510, EDU 555, LIT 582</td>
+
+<td class="sem">Summer 2016</td>
+<td class="clist">
+EDU 516 (2: D. Grayson *)<br />
+EDU 517 (1: D. Grayson *)<br />
+<strong>TOTAL</strong>: 3</td>
+<td class="sem">Spring 2016</td>
+<td class="clist">
+ADO 350 (1 section)<br />
+CED 350 (2 sections)<br />
+EDU 516 (2 sections)<br />
+SPE 304 (3 sections)<br />
+<strong>TOTAL</strong>: 8</td>
+</tr>
+<tr>
+<td class="sem">Fall 2015</td>
+<td class="clist">
+EDU 200 (1 section)<br />
+EDU 301 (4 sections)<br />
+LIT 530 (2 sections)<br />
+SPE 304 (3 sections)<br />
+SPE 504 (1 section)<br />
+<strong>TOTAL</strong>: 11</td>
+<td class="sem">Summer 2015</td><td class="clist">
+CED 350 (1 section)<br />
+EDU 381 (1 section)<br />
+EDU 516 (1 section)<br />
+SPE 504 (2 sections)<br />
+<strong>TOTAL</strong>: 5</td>
+<td class="sem">Spring 2015</td>
+<td class="clist">
+ADO 394 (3 sections)<br />
+CED 350 (1 section)<br />
+EDU 114 (1 section)<br />
+EDU 301 (2 sections)<br />
+EDU 500 (1 section)<br />
+EDU 516 (1 section)<br />
+LIT 311 (2 sections)<br />
+LIT 350 (1 section)<br />
+LIT 396 (1 section)<br />
+LIT 501 (1 section)<br />
+SPE 304 (6 sections)<br />
+SPE 504 (1 section)<br />
+SPE 514 (1 section)<br />
+<strong>TOTAL</strong>: 22
+</td>
+</tr>
+<tr>
+<td class="sem">Fall 2014</td>
+<td class="clist">
+ADO 350 (1 section)<br />
+CED 350 (3 sections)<br />
+CED 394 (1 section)<br />
+EDU 200 (1 section)<br />
+EDU 210 (1 section)<br />
+EDU 301 (2 sections)<br />
+EDU 500 (2 sections)<br />
+EDU 516 (1 section)<br />
+LIT 311 (1 section)<br />
+LIT 501 (1 section)<br />
+LIT 530 (2 sections)<br />
+SPE 304 (4 sections)<br />
+SPE 504 (1 section)<br />
+<strong>TOTAL</strong>: 21
+</td>
+<td class="sem">Summer 2014</td>
+<td class="clist">
+EDU 516 (3 sections)<br />
+EDU 518 (3 sections)<br />
+<strong>TOTAL</strong>: 6</td>
+<td class="sem">Spring 2014</td>
+<td class="clist">
+ADO 394 (2 sections)<br />
+CAI 555 (1 section)<br />
+CED 350 (5 sections)<br />
+EDU 301 (4 sections)<br />
+EDU 516 (4 sections)<br />
+LIT 311 (5 sections)<br />
+LIT 396 (1 section)<br />
+LIT 530 (2 sections)<br />
+SPE 304 (6 sections)<br />
+<strong>TOTAL</strong>: 30</td>
+</tr>
+<td class="sem">Fall 2013</td>
+<td class="clist">
+ADO 350 (1 section)<br />
+CED 350 (6 sections)<br />
+EDU 301 (3 sections)<br />
+EDU 516 (9 sections)<br />
+LIT 530 (1 section)<br />
+SPE 304 (2 sections)<br />
+<strong>TOTAL</strong>: 22
+</td>
+</tr>
+</tbody>
+</table>
+
+	   
+	   
+	   
       </div>
     </div>
   </div>
-  <div class="panel panel-default">
+  <div class="panel panel-default" id="panelThree">
     <div class="panel-heading" role="tab" id="headingThree">
       <h4 class="panel-title">
         <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
@@ -74,12 +338,12 @@ background-image: linear-gradient(to bottom,#ff0099 0,#ff0000 100%);
     </div>
     <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
       <div class="panel-body">
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+       <p>Waiting for responses re: (a) proof of UUP membership, (b) CPN </p>
       </div>
     </div>
   </div>
   
-   <div class="panel panel-default">
+   <div class="panel panel-default" id="panelFour">
     <div class="panel-heading" role="tab" id="headingFour">
       <h4 class="panel-title">
         <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
@@ -89,7 +353,27 @@ background-image: linear-gradient(to bottom,#ff0099 0,#ff0000 100%);
     </div>
     <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
       <div class="panel-body">
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+     <p class="subheading">TASKS</p>
+
+<p class="subheading">NOTES</p>
+
+<p class="subsubheading">Horror Movies on Netflix I Might Want to Watch</p>
+<ul>
+<li>Horns</li>
+<li>Dark Skies</li>
+<li>Stonehearst Asylum</li>
+</ul>
+
+<p class="subsubheading">Art</p>
+<ul>
+<li>I like the idea of painting things in watercolor, cutting them out, and then pasting them into a collage. See <a href="http://www.thedrawingboardau.com/get-messy-season-of-introspection-week-1/">this</a> for inspiration.</li> 
+<li>I want to try sewing on paper</li>
+<li>I could make reference cards for ICAD &mdash; flower shapes, borders, patterns, etc.</li>
+<li>Watercolor or other paint background; mandalas on top in white paint; mandalas outlined in black (<a href="http://lostcoastpost.blogspot.com.au/2015/07/icad-2015-cards-36-42.html">source</a>)
+
+</ul>
+
+
       </div>
     </div>
   </div>

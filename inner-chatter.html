@@ -1,33 +1,60 @@
 <html>
 <head>
+<script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
 <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet" type="text/css">
 
 <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
 
 <style>
+.panel-group { padding-top: 15px; }
+
+.panel-default>.panel-heading#headingOne {
+background-image: linear-gradient(to bottom,#ff0099 0,#fe61c0 100%);
+}
+
+#panelOne { border: 1px solid #fe61c0; }	
+
+.panel-default>.panel-heading#headingTwo {
+background-image: linear-gradient(to bottom,#104E8B 0,#1E90FF 100%);
+}
+
+#panelTwo { border: 1px solid #1E90FF; }
+
+.panel-default>.panel-heading#headingThree {
+background-image: linear-gradient(to bottom,#2E8B57 0,#43CD80 100%);
+}
+
+#panelThree { border: 1px solid #43CD80; }
+
+.panel-default>.panel-heading#headingFour {
+background-image: linear-gradient(to bottom,#EE7600 0,#FF8C00 100%);
+}
+
+#panelFour { border: 1px solid #FF8C00; }
+
+.panel-default>.panel-heading { color: #FFF; }
+
+a:focus, a:hover { text-decoration: none; }
+
 body { color: #555; font-family: 'Abel', sans-serif; font-size: 14px; }
 
-.heading { font-size: 20px; padding: 5px; font-weight: bold; letter-spacing: 3px; }
+.panel-heading { font-size: 20px; letter-spacing: 3px; text-transform: uppercase; font-weight: bold; }
 .subheading, .subsubheading { font-size: 18px; font-weight: bold; text-transform: uppercase; }
 
 .subsubheading { margin-left: 10px; font-size: 16px; }
 
 .subheading:before { content: '\2023\a0'; }
 .subsubheading:before { content: '\2023\2023\a0'; }
-
-.work, .school, .home, .blather { width: 65%; display: block; margin: 10 auto; }
-
-.work { border: 1px solid green; }
-.school { border: 1px solid purple; }
-.home { border: 1px solid #FF0099; }
-.blather { border: 1px solid #FFB6C1; }
-
-.blather .heading { background: #FFB6C1; color: black; }
-.work .heading { background: green; color: white; }
-.school .heading { background: purple; color: white; }
-.home .heading { background: #FF0099; color: black; }
-
-.divbody { margin: 0 10px; }
 
 table {
   border-collapse: collapse;
@@ -52,19 +79,23 @@ table tr td:last-child {
 #educlass .sem { width: 9%; }
 #educlass .clist { width: 24%; }
 td { padding: 5px; vertical-align: top; }
-
 </style>
+
 
 </head>
 <body>
-
-<p>Hey testing yo!!!</p>
-
-
-<div class="blather">
-<div class="heading">BLATHER</div>
-<div class="divbody">
-
+<div class="container">
+  <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+    <div class="panel panel-default" id="panelOne">
+      <div class="panel-heading" role="tab" id="headingOne">
+        <h4 class="panel-title">
+          <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Blather
+          </a>
+      </h4>
+    </div>
+    <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+      <div class="panel-body">
 <p>Hey, so, good morning.</p>
 <p>Good morning to you too.</p>
 <p>So, I see you've started a list. Let's put it here.</p>
@@ -101,18 +132,22 @@ td { padding: 5px; vertical-align: top; }
 <li>LG LTI</li>
 <li>Assessment</li>
 </ul>
-
-
-
-
-</div>
-</div>
-
-<div class="work">
-
-<div class="heading">WORK</div>
-
-<div class="divbody">
+		
+		
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default" id="panelTwo">
+    <div class="panel-heading" role="tab" id="headingTwo">
+      <h4 class="panel-title">
+        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          Work
+        </a>
+      </h4>
+    </div>
+    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+      <div class="panel-body">
+       
 <p class="subheading">TASKS</p>
 
 <ul>
@@ -287,24 +322,38 @@ SPE 304 (2 sections)<br />
 </tbody>
 </table>
 
-</div>
-
-</div>
-
-<div class="school">
-<div class="heading">SCHOOL</div>
-
-<div class="divbody">
-<p>Waiting for responses re: (a) proof of UUP membership, (b) CPN </p>
-
-
-</div>
-</div>
-
-<div class="home">
-<div class="heading">HOME</div>
-<div class="divbody">
-<p class="subheading">TASKS</p>
+	   
+	   
+	   
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default" id="panelThree">
+    <div class="panel-heading" role="tab" id="headingThree">
+      <h4 class="panel-title">
+        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          School
+        </a>
+      </h4>
+    </div>
+    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+      <div class="panel-body">
+       <p>Waiting for responses re: (a) proof of UUP membership, (b) CPN </p>
+      </div>
+    </div>
+  </div>
+  
+   <div class="panel panel-default" id="panelFour">
+    <div class="panel-heading" role="tab" id="headingFour">
+      <h4 class="panel-title">
+        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+          Home
+        </a>
+      </h4>
+    </div>
+    <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+      <div class="panel-body">
+     <p class="subheading">TASKS</p>
 
 <p class="subheading">NOTES</p>
 
@@ -325,6 +374,11 @@ SPE 304 (2 sections)<br />
 </ul>
 
 
+      </div>
+    </div>
+  </div>
+  
+  
 </div>
 </div>
 
